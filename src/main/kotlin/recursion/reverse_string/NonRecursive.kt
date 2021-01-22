@@ -14,7 +14,6 @@ object NonRecursive {
             right--
         }
     }
-
 }
 
 fun main() {
