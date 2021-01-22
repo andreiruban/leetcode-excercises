@@ -1,5 +1,8 @@
 package recursion.swap_pairs
 
+import recursion.ListNode
+import recursion.swap_pairs.SwapPairs.swapPairs
+
 /**
  * Example:
  * var li = ListNode(5)
@@ -12,27 +15,26 @@ package recursion.swap_pairs
 
 object SwapPairs {
     fun swapPairs(head: ListNode?): ListNode? {
-        var current = head
-
-        while (current?.next != null) {
-            swapPair(current, current.next)
-            current = current.next?.next
-        }
-
+        swapPair(head, head?.next)
         return head
     }
 
     private fun swapPair(left: ListNode?, right: ListNode?) {
-        val temp: Int? = left?.`val`
-        right?.let {
-            left?.`val` = it.`val`
+        if (left != null && right != null) {
+            val temp: Int = left.`val`
+            left.`val` = right.`val`
+            right.`val` = temp
         }
-        right?.let {
-            it.`val` = temp ?: 0
-        }
-    }
 
-    class ListNode(var `val`: Int) {
-        var next: ListNode? = null
+        if (right?.next != null && right.next?.next != null) {
+            swapPair(right.next, right.next?.next)
+        }
     }
+}
+
+fun main() {
+    val given = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5, null)))))
+    println(given)
+    swapPairs(given)
+    println(given)
 }
