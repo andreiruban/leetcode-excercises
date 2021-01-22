@@ -1,7 +1,5 @@
 package recursion.reverse_string
 
-import recursion.reverse_string.NonRecursive.reverseString
-
 object NonRecursive {
     fun reverseString(s: CharArray) {
         var left = 0
@@ -14,10 +12,4 @@ object NonRecursive {
             right--
         }
     }
-}
-
-fun main() {
-    val s = charArrayOf('h', 'e', 'l', 'l', 'o')
-    reverseString(s)
-    println(s)
 }
