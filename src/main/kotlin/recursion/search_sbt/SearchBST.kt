@@ -17,23 +17,14 @@ import recursion.TreeNode
 object SearchBST {
 
     fun searchBST(root: TreeNode?, `val`: Int): TreeNode? = when {
-        root != null -> {
-            when (root.`val`) {
-                `val` -> {
-                    root
-                }
-                else -> {
-                    val left = searchBST(root.left, `val`)
-                    val right = searchBST(root.right, `val`)
-                    when {
-                        left != null || right != null -> left ?: right
-                        else -> null
-                    }
-                }
+        root == null || root.`val` == `val` -> root
+        else -> when {
+            `val` < root.`val` -> {
+                searchBST(root.left, `val`)
             }
-        }
-        else -> {
-            null
+            else -> {
+                searchBST(root.right, `val`)
+            }
         }
     }
 }
