@@ -14,25 +14,16 @@ fun TreeNode.printed(): String {
 }
 
 private fun printNode(sb: StringBuilder, node: TreeNode?) {
-    if (node != null) {
-        val left = node.left
-        val right = node.right
+    node?.let { current ->
 
-        if (left != null) {
-            sb.append(",${left.`val`}")
-        }
+        val left = current.left
+        val right = current.right
 
-        if (right != null) {
-            sb.append(",${right.`val`}")
-        }
+        left?.let { sb.append(",${it.`val`}") }
+        right?.let { sb.append(",${it.`val`}") }
 
-        if (left != null) {
-            printNode(sb, left)
-        }
-
-        if (right != null) {
-            printNode(sb, right)
-        }
+        left?.let { printNode(sb, it) }
+        right?.let { printNode(sb, it) }
     }
 }
 
