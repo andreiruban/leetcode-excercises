@@ -1,37 +1,37 @@
 package recursion
 
-import java.lang.StringBuilder
+class TreeNode(var `val`: Int, var left: TreeNode? = null, var right: TreeNode? = null)
 
-class TreeNode(var `val`: Int, var left: TreeNode? = null, var right: TreeNode? = null) {
+fun TreeNode.printed(): String {
+    val sb = StringBuilder("[")
 
-    // FIXME: fix wrong representation
-    override fun toString(): String {
-        val sb = StringBuilder("[$`val`")
+    sb.append(this.`val`)
+
+    printNode(sb, this)
+    sb.append("]")
+
+    return sb.toString()
+}
+
+private fun printNode(sb: StringBuilder, node: TreeNode?) {
+    if (node != null) {
+        val left = node.left
+        val right = node.right
+
+        if (left != null) {
+            sb.append(",${left.`val`}")
+        }
+
+        if (right != null) {
+            sb.append(",${right.`val`}")
+        }
+
         if (left != null) {
             printNode(sb, left)
         }
 
         if (right != null) {
             printNode(sb, right)
-        }
-
-        sb.append("]")
-
-        return sb.toString()
-    }
-
-    private fun printNode(sb: StringBuilder, node: TreeNode?) {
-        if (node != null) {
-            sb.append(",").append(node.`val`)
-
-            if (node.left != null) {
-                printNode(sb, node.left)
-            }
-
-
-            if (node.right != null) {
-                printNode(sb, node.right)
-            }
         }
     }
 }
@@ -45,5 +45,5 @@ fun main() {
         right = TreeNode(7)
     )
 
-    print(given.toString())
+    print(given.printed())
 }
