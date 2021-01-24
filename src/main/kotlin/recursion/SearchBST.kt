@@ -1,6 +1,4 @@
-package recursion.search_sbt
-
-import recursion.TreeNode
+package recursion
 
 
 /**

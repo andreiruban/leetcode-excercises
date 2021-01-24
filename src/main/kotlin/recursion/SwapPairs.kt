@@ -1,7 +1,6 @@
-package recursion.swap_pairs
+package recursion
 
-import recursion.ListNode
-import recursion.swap_pairs.SwapPairs.swapPairs
+import recursion.SwapPairs.swapPairs
 
 /**
  * Example:

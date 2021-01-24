@@ -1,7 +1,6 @@
-package recursion.reverse_linked_list
+package recursion
 
-import recursion.ListNode
-import recursion.reverse_linked_list.ReversedLinkedList.reverseList
+import recursion.ReversedLinkedList.reverseList
 
 /**
  * Example:
