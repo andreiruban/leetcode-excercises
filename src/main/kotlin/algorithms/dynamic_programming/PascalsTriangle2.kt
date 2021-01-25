@@ -1,6 +1,6 @@
-package algorithms.recursion
+package algorithms.dynamic_programming
 
-import algorithms.recursion.PascalsTriangle2.getRow
+import algorithms.dynamic_programming.PascalsTriangle2.getRow
 
 object PascalsTriangle2 {
 
