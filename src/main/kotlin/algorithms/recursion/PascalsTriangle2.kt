@@ -2,20 +2,17 @@ package algorithms.recursion
 
 import algorithms.recursion.PascalsTriangle2.getRow
 
-@SuppressWarnings("DUPLICATES")
 object PascalsTriangle2 {
 
-    fun getRow(rowIndex: Int): List<Int> {
-        return generate(rowIndex + 1).last()
-    }
+    fun getRow(rowIndex: Int): List<Int> = generate(rowIndex).last()
 
-    fun generate(numRows: Int): List<List<Int>> {
-
-        if (numRows == 0) return emptyList()
+    private fun generate(rowIndex: Int): List<List<Int>> {
 
         val triangle = mutableListOf(listOf(1))
 
-        (1 until numRows).forEach { rowI ->
+        if (rowIndex == 0) return triangle
+
+        (1..rowIndex).forEach { rowI ->
             val prev = triangle.last()
             val next = listOf(1) + (1 until rowI).map { rowJ -> prev[rowJ] + prev[rowJ - 1] }.toList() + listOf(1)
             triangle.add(next)
