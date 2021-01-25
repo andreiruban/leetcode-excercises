@@ -1,6 +1,5 @@
 package algorithms.recursion
 
-
 /**
  * Example:
  * var ti = TreeNode(5)
