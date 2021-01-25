@@ -1,6 +1,6 @@
-package recursion
+package algorithms.recursion
 
-import recursion.SwapPairs.swapPairs
+import algorithms.recursion.SwapPairs.swapPairs
 
 /**
  * Example:

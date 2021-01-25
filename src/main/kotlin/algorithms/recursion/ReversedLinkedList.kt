@@ -1,6 +1,6 @@
-package recursion
+package algorithms.recursion
 
-import recursion.ReversedLinkedList.reverseList
+import algorithms.recursion.ReversedLinkedList.reverseList
 
 /**
  * Example:

@@ -1,6 +1,6 @@
-package dynamic_programming
+package algorithms.dynamic_programming
 
-import dynamic_programming.PascalsTriangle.generate
+import algorithms.dynamic_programming.PascalsTriangle.generate
 
 object PascalsTriangle {
     fun generate(numRows: Int): List<List<Int>> {

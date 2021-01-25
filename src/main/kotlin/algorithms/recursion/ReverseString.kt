@@ -1,4 +1,4 @@
-package recursion
+package algorithms.recursion
 
 object ReverseString {
 
