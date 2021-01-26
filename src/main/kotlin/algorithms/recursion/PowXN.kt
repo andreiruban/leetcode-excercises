@@ -5,8 +5,8 @@ import algorithms.recursion.Pow.recursive
 object Pow {
 
     /**
-     * Time: O(logn)
-     * Space: O(logn)
+     * Time: O(log(N))
+     * Space: O(log(N))
      * */
     fun recursive(x: Double, n: Int): Double = when {
         n < 0 -> {
