@@ -4,6 +4,10 @@ import algorithms.recursion.MergeTwoSortedLists.mergeTwoLists
 
 object MergeTwoSortedLists {
 
+    /**
+     * Time complexity: O(n+m)
+     * Space complexity: O(n+m)
+     * */
     fun mergeTwoLists(l1: ListNode?, l2: ListNode?): ListNode? = when {
         l1 == null -> {
             l2
