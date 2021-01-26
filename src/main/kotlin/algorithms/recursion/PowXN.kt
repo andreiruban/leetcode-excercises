@@ -1,8 +1,31 @@
 package algorithms.recursion
 
+import algorithms.recursion.Pow.bfs
 import algorithms.recursion.Pow.recursive
 
 object Pow {
+
+    /**
+     * Time: O(N)
+     * Space: O(1)
+     * */
+    fun bfs(x: Double, n: Int): Double {
+        var ans = 1.0
+        when {
+            n < 0 -> {
+                repeat((0 until -n).count()) {
+                    ans *= 1 / x
+                }
+            }
+            else -> {
+                repeat((0 until n).count()) {
+                    ans *= x
+                }
+            }
+        }
+
+        return ans
+    }
 
     /**
      * Time: O(log(N))
@@ -35,5 +58,6 @@ object Pow {
 }
 
 fun main() {
-    println(recursive(2.0, 100))
+    println(recursive(2.0, 20))
+    println(bfs(2.0, 20))
 }
