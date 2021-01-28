@@ -1,5 +1,7 @@
 package algorithms.recursion
 
+import algorithms.TreeNode
+
 /**
  * Example:
  * var ti = TreeNode(5)

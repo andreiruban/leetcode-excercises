@@ -1,5 +1,6 @@
 package algorithms.recursion
 
+import algorithms.ListNode
 import algorithms.recursion.ReversedLinkedList.reverseList
 
 /**

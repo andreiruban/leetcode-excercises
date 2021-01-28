@@ -1,4 +1,4 @@
-package algorithms.recursion
+package algorithms
 
 class ListNode(var `val`: Int, var next: ListNode? = null) {
 

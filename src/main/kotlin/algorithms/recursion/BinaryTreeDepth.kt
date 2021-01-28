@@ -1,5 +1,6 @@
 package algorithms.recursion
 
+import algorithms.TreeNode
 import algorithms.recursion.BinaryTreeDepth.recursion
 import kotlin.math.max
 
