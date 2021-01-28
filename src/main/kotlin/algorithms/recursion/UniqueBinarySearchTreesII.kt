@@ -1,7 +1,7 @@
 package algorithms.recursion
 
 import algorithms.recursion.UniqueBinarySearchTreesII.generateTrees
-import java.util.*
+import java.util.LinkedList
 
 object UniqueBinarySearchTreesII {
 

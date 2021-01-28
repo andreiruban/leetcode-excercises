@@ -22,7 +22,6 @@ object BinaryTreeDepth {
         }
 }
 
-
 fun main() {
     val given = TreeNode(
         4,
