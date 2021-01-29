@@ -2,11 +2,7 @@ package algorithms.arrays
 
 import algorithms.arrays.DuplicateZeros.duplicateZeros
 import java.util.LinkedList
-
 import java.util.Queue
-
-
-
 
 object DuplicateZeros {
 
