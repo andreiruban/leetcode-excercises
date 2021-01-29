@@ -3,6 +3,11 @@ package algorithms.arrays
 import algorithms.arrays.SquaresOfSortedArray.sortedSquares
 
 object SquaresOfSortedArray {
+
+    /**
+     * Time O(n)
+     * Space O(n)
+     * */
     fun sortedSquares(A: IntArray): IntArray? {
         val n = A.size
         var j = 0
