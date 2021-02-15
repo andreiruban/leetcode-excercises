@@ -1,6 +1,6 @@
 plugins {
-    kotlin("jvm") version "1.4.21"
-    id("org.jlleitschuh.gradle.ktlint") version "9.4.1"
+    kotlin("jvm") version "1.4.30"
+    id("org.jlleitschuh.gradle.ktlint") version "10.0.0"
 }
 
 group = "io.ruban"
