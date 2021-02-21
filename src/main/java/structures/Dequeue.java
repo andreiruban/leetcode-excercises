@@ -1,3 +1,5 @@
+package structures;
+
 import java.util.LinkedList;
 
 public class Dequeue<E> {

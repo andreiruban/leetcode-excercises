@@ -1,3 +1,5 @@
+package structures;
+
 import java.util.Stack;
 
 // implementation is not synchronized
