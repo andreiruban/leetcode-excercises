@@ -3,23 +3,27 @@ package structures;
 import java.util.Stack;
 
 public class ExtendedQueue {
-    private final Stack<Integer> in = new Stack<>();
-    private final Stack<Integer> out = new Stack<>();
-
-    private int max;
-    private int min;
+    private final Stack<Integer> data;
+    private final Stack<Integer> min;
+    private final Stack<Integer> max;
     private int sum;
 
+    public ExtendedQueue() {
+        this.data = new Stack<>();
+        this.min = new Stack<>();
+        this.max = new Stack<>();
+    }
+
     public boolean isEmpty() {
-        return in.isEmpty() && out.isEmpty();
+        return data.isEmpty();
     }
 
     public Integer max() {
-        return max;
+        return max.peek();
     }
 
     public Integer min() {
-        return min;
+        return min.peek();
     }
 
     public Integer sum() {
@@ -27,29 +31,30 @@ public class ExtendedQueue {
     }
 
     public void push(Integer element) {
-        if (element > max) max = element;
-        if (element < min) min = element;
-        sum += element;
+        data.add(element);
 
-        in.push(element);
+        if (min.isEmpty()) {
+            min.push(element);
+        } else {
+            min.push(Math.min(element, min.peek()));
+        }
+
+        if (max.isEmpty()) {
+            max.push(element);
+        } else {
+            max.push(Math.min(element, max.peek()));
+        }
+
+        sum += element;
     }
 
     public Integer pop() {
-        if (out.isEmpty() && !in.isEmpty()) {
-            while (!in.isEmpty()) {
-                Integer el = in.pop();
-                out.push(el);
-            }
-        }
+        int element = data.pop();
+        sum -= element;
+        max.pop();
+        min.pop();
 
-        Integer poped = out.pop();
-        sum -= poped;
-
-        if (!out.isEmpty()) {
-            max = out.stream().max(Integer::compare).get();
-            min = out.stream().min(Integer::compare).get();
-        }
-        return poped;
+        return element;
     }
 
     public static void main(String[] args) {
