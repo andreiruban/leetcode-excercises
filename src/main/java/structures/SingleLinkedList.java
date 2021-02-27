@@ -1,18 +1,18 @@
 package structures;
 
 public class SingleLinkedList {
-    void pushFront(int x) {
+    public void pushFront(int x) {
         head = new SingleLinkedNode(this.head, x);
     }
 
-    void popFront() {
+    public void popFront() {
         SingleLinkedNode p = head;
         if (p != null) {
             head = p.next;
         }
     }
 
-    void pushBack(int x) {
+    public void pushBack(int x) {
         SingleLinkedNode p = head, prev = null;
         while (p != null) {
             prev = p;
@@ -25,7 +25,7 @@ public class SingleLinkedList {
             head = p;
     }
 
-    void popBack() {
+    public void popBack() {
         SingleLinkedNode p = head, prev = null;
         while (p != null && p.next != null) {
             prev = p;
@@ -40,7 +40,7 @@ public class SingleLinkedList {
     }
 
 
-    void pushAfter(int pos, int x) {
+    public void pushAfter(int pos, int x) {
         int i = 0;
         SingleLinkedNode p = head;
         while (i < pos && p != null) {
@@ -52,7 +52,7 @@ public class SingleLinkedList {
         }
     }
 
-    void popAfter(int pos) {
+    public void popAfter(int pos) {
         int i = 0;
         SingleLinkedNode p = head;
         while (i < pos && p != null) {
@@ -64,16 +64,25 @@ public class SingleLinkedList {
         }
     }
 
-    SingleLinkedNode head = null;
+    public SingleLinkedNode head = null;
 
-    private class SingleLinkedNode {
+    public class SingleLinkedNode {
         SingleLinkedNode(SingleLinkedNode next, int val) {
             this.next = next;
             this.item = val;
         }
 
-        SingleLinkedNode next;
-        int item;
+        public SingleLinkedNode next;
+        public int item;
+
+        @Override
+        public String toString() {
+            if(next == null) {
+                return "[{ val=" + item + ", next=null]";
+            } else {
+                return "[{ val=" + item + ", next=" + next.item + "]";
+            }
+        }
     }
 
     @Override
