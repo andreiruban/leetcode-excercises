@@ -8,9 +8,18 @@ class DynamicArray {
     private Integer[] arr;
 
     public DynamicArray(int capacity) {
-        if(capacity == 0) capacity++;
+        if (capacity == 0) capacity++;
         arr = new Integer[capacity];
         size = 0;
+    }
+
+    public DynamicArray(int capacity, int defaultValue) {
+        this.size = capacity;
+        arr = new Integer[size];
+
+        for (int i = 0; i < size; i++) {
+            arr[i] = defaultValue;
+        }
     }
 
     public int size() {
@@ -26,9 +35,9 @@ class DynamicArray {
     }
 
     public void set(int i, int a) {
-        if(size == capacity()) doubleCapacity();
+        if (size == capacity()) doubleCapacity();
 
-        System.arraycopy(arr, i, arr, i+1, size-i);
+        System.arraycopy(arr, i, arr, i + 1, size - i);
         arr[i] = a;
         size++;
     }
@@ -40,8 +49,8 @@ class DynamicArray {
     }
 
     public int popBack() {
-        int a = arr[size-1];
-        arr[size-1] = null;
+        int a = arr[size - 1];
+        arr[size - 1] = null;
         size--;
         return a;
     }
