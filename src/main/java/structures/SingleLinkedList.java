@@ -75,4 +75,23 @@ public class SingleLinkedList {
         SingleLinkedNode next;
         int item;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+
+        SingleLinkedNode cursor = head;
+
+        while (cursor != null) {
+            sb.append(cursor.item);
+            if (cursor.next != null) {
+                sb.append(",");
+            }
+            cursor = cursor.next;
+        }
+
+        sb.append("]");
+        return sb.toString();
+    }
 }
