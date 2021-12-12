@@ -1,6 +1,6 @@
 plugins {
-    kotlin("jvm") version "1.4.30"
-    id("org.jlleitschuh.gradle.ktlint") version "10.0.0"
+    kotlin("jvm") version "1.6.0"
+    id("org.jlleitschuh.gradle.ktlint") version "10.2.0"
 }
 
 group = "io.ruban"
@@ -12,11 +12,12 @@ repositories {
 }
 
 dependencies {
-    implementation(kotlin("stdlib"))
+    implementation(kotlin("stdlib-jdk8"))
 }
 
+// Configuration documentation: https://github.com/JLLeitschuh/ktlint-gradle#configuration
 configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
-    version.set("0.40.0")
+    version.set("0.42.1")
     debug.set(false)
     verbose.set(true)
     android.set(false)
