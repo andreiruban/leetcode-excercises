@@ -17,8 +17,8 @@ object TwoSum {
 }
 
 fun main() {
-    println(TwoSum.twoSum(intArrayOf(2,7,11,15), 9).joinToString(","))
-    println(TwoSum.twoSum(intArrayOf(3,2,4), 6).joinToString(","))
-    println(TwoSum.twoSum(intArrayOf(3,3), 6).joinToString(","))
+    println(TwoSum.twoSum(intArrayOf(2, 7, 11, 15), 9).joinToString(","))
+    println(TwoSum.twoSum(intArrayOf(3, 2, 4), 6).joinToString(","))
+    println(TwoSum.twoSum(intArrayOf(3, 3), 6).joinToString(","))
     println(TwoSum.twoSum(intArrayOf(0, 4, 3, 0), 0).joinToString(","))
 }
