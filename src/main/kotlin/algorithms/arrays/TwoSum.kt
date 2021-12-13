@@ -11,7 +11,6 @@ object TwoSum {
             indices.add(i)
         }
 
-
         return intArrayOf()
     }
 }
