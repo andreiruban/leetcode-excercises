@@ -2,6 +2,7 @@ package algorithms.arrays
 
 object TwoSum {
 
+    // O(n^2)
     fun twoSum(nums: IntArray, target: Int): IntArray {
         val indices = mutableListOf<Int>()
         nums.forEachIndexed { i, a ->
