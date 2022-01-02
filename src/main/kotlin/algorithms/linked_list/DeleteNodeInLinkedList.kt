@@ -15,6 +15,5 @@ object DeleteNodeInLinkedList {
         deleteNode(given.next)
 
         println(given)
-
     }
 }
